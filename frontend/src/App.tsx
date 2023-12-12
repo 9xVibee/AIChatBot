@@ -1,7 +1,9 @@
 import "./App.css";
 
 function App() {
-  return <>hellow World!</>;
+  return <main>
+    
+  </main>;
 }
 
 export default App;

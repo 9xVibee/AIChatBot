@@ -1,12 +1,12 @@
-import express from "express";
-
-const app = express();
-
-// Middlewares
-// this will tell app that we are taking json data from client side
-app.use(express.json());
+import app from "./app.js";
+import { connectToDatabase } from "./db/connectDb.js";
 
 // Connections and listeners
-app.listen(5000, () => {
-  console.log(`Listening on: 5000`);
-});
+// Connecting to database
+connectToDatabase()
+  .then(() => {
+    app.listen(process.env.PORT, () => {
+      console.log(`Listening on: ${process.env.PORT}`);
+    });
+  })
+  .catch((err) => console.log(err));
