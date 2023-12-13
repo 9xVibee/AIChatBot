@@ -73,7 +73,8 @@ export const userSignUp = async (
     });
     return res.status(201).json({
       message: "User Created Successfully",
-      id: user._id.toString(),
+      name: user.name,
+      email: user.email,
     });
   } catch (err) {
     console.log(err);
@@ -90,6 +91,8 @@ export const userLogin = async (
   res: Response,
   next: NextFunction
 ) => {
+  console.log("gmm");
+
   try {
     const { email, password } = req.body;
     const existingUser = await User.findOne({ email });
@@ -136,11 +139,12 @@ export const userLogin = async (
     // sending user id if everything is okay
     return res.status(200).json({
       message: "Ok",
-      id: existingUser._id,
+      name: existingUser.name,
+      email: existingUser.email,
     });
   } catch (err) {
     console.log(err);
-    return res.status(400).json({
+    return res.status(401).json({
       message: "ERROR",
       cause: err.message,
     });

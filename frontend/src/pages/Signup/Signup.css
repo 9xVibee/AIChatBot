@@ -1,0 +1,78 @@
+.login-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+    padding-top: 5rem;
+}
+
+.form-field-signup {
+    width: 30%;
+    height: 500px;
+    border-radius: 10px;
+    color: #1e1e1e;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+    gap: 20px;
+}
+
+.form-field-signup .login-button {
+    padding: 10px 0px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 15px;
+    background-color: #DBF227;
+    transition: all 0.5s;
+}
+
+.form-field-signup .heading p {
+    font-size: 15px;
+}
+
+.form-field-signup .login-button:hover {
+    background-color: #cce224;
+}
+
+.form-field-signup h1 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.email-login {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.email-login input {
+    width: 96%;
+    padding: 10px 10px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid #C5C8CB;
+}
+
+.no-account-yet {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.no-account-yet button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 18px;
+    border: none;
+    background-color: #DBF227;
+    transition: all 0.5s;
+}
+
+.no-account-yet button:hover {
+    background-color: #cce224;
+}
